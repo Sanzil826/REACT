@@ -1,1 +1,11 @@
 @import "tailwindcss";
+
+/* works in chrome */
+/* #right::-webkit-scrollbar{
+    display: none;
+} */
+
+/* works in firefox */
+#right{
+    scrollbar-width: none;
+}

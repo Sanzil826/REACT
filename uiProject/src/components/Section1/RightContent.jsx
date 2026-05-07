@@ -1,8 +1,11 @@
+import RightCard from "./RightCard"
 
-const RightContent = () => {
+const RightContent = (props) => {
   return (
-    <div className="h-full w-3/4 bg-blue-200">
-      right
+    <div id="right" className="h-full rounded-4xl overflow-x-auto p-6 w-3/4 flex flex-nowrap gap-10">
+      {props.users.map((elem,idx)=>{
+        return <RightCard key={idx}{...elem}/>
+      })}
     </div>
   )
 }
