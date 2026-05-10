@@ -10,20 +10,22 @@ const App = () => {
     
     const copyTask =[...task];
     copyTask.push({title, desc})
-    setTask(copyTask)
-    console.log(task);
-    
-    
-    
+    setTask(copyTask)       
     setTitle('')
     setDesc('')
   }
 
-  const deleteNote=(idx)=>{
-    const copyTask = [...task];
-    copyTask.splice(idx,1)
-    setTask(copyTask)
-  }
+  // const deleteNote=(idx)=>{
+  //   const copyTask = [...task];
+  //   console.log(copyTask)
+  //   copyTask.splice(idx,1)
+  //   setTask(copyTask)
+  // }
+
+  const deleteNote = (idx) => {
+  const updatedTasks = task.filter((_, i) => i !== idx);
+  setTask(updatedTasks);
+};
 
   return (
     <div className="h-screen p-12 lg:flex bg-black text-white">
